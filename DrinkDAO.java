@@ -11,9 +11,9 @@ public class DrinkDAO {
 	private PreparedStatement psmt;
 	private ResultSet rs;
 	private int cnt;
-	private String sql;
+	private String sql; 
 
-	// DB ¿¬°á
+	// DB Â¿Â¬Â°Ã¡
 	public void connect() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -30,7 +30,7 @@ public class DrinkDAO {
 		}
 	}
 
-	// DB ¿¬°á Á¾·á
+	// DB Â¿Â¬Â°Ã¡ ÃÂ¾Â·Ã¡
 	public void close() {
 		try {
 			if (rs != null) {
