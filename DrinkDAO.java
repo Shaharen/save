@@ -13,7 +13,7 @@ public class DrinkDAO {
 	private int cnt;
 	private String sql; 
 
-	// DB ¿¬°á
+	// DB 연결
 	public void connect() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -30,7 +30,7 @@ public class DrinkDAO {
 		}
 	}
 
-	// DB ¿¬°á Á¾·á
+	// DB 연결 종료
 	public void close() {
 		try {
 			if (rs != null) {
