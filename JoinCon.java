@@ -31,23 +31,23 @@ public class JoinCon extends HttpServlet {
 		int cnt = dao.memberJoin(new MemberDTO(id,pw,nick,phone,birth,sex));
 		
 		if (cnt>0 ) {
-			// È¸¿ø°¡ÀÔ ¿Ï·á! ¸ŞÀÎÆäÀÌÁö·Î ÀÌµ¿ÇÕ´Ï´Ù Ãâ·Â ÈÄ ÀÌµ¿
+			// íšŒì›ê°€ì… ì™„ë£Œ! ë©”ì¸í˜ì´ì§€ë¡œ ì´ë™í•©ë‹ˆë‹¤ ì¶œë ¥ í›„ ì´ë™
 			PrintWriter out = response.getWriter();
 			out.print("<script>");
-			out.print("alert('È¸¿ø°¡ÀÔ ¼º°ø!'+<br>+'¸ŞÀÎ ÆäÀÌÁö·Î ÀÌµ¿ÇÕ´Ï´Ù.');");
+			out.print("alert('íšŒì›ê°€ì… ì„±ê³µ!'+<br>+'ë©”ì¸ í˜ì´ì§€ë¡œ ì´ë™í•©ë‹ˆë‹¤.');");
 			out.print("location.href='main.jsp';");
 			out.print("</script>");
 			response.sendRedirect("main.jsp");
 		} else {
-			// È¸¿ø°¡ÀÔ ½ÇÆĞ!
+			// íšŒì›ê°€ì… ì‹¤íŒ¨!
 			PrintWriter out = response.getWriter();
 			out.print("<script>");
-			out.print("alert('È¸¿ø°¡ÀÔ ½ÇÆĞ');");
-			// ¸ŞÀÎÆäÀÌÁö·Î ÀÌµ¿ÇÕ´Ï´Ù
+			out.print("alert('íšŒì›ê°€ì… ì‹¤íŒ¨');");
+			// ë©”ì¸í˜ì´ì§€ë¡œ ì´ë™í•©ë‹ˆë‹¤
 			out.print("location.href='main.jsp';");
 			out.print("</script>");
 		}
-		
+		   
 		
 	}
 
