@@ -2,7 +2,7 @@ package Controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+import javax.servlet.annotation.WebServlet;  
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +21,7 @@ public class UpdateCon extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		// id´Â ÀúÀåµÈ ¼¼¼Ç¿¡¼­ ¹Ş°í, ³ª¸ÓÁö´Â update.jsp¿¡¼­ ¹Ş¾Æ¿Â´Ù.
+		// idëŠ” ì €ì¥ëœ ì„¸ì…˜ì—ì„œ ë°›ê³ , ë‚˜ë¨¸ì§€ëŠ” update.jspì—ì„œ ë°›ì•„ì˜¨ë‹¤.
 		String id = member.getId();
 		String pw = request.getParameter("pw");
 		String nick = request.getParameter("nick");
@@ -39,7 +39,7 @@ public class UpdateCon extends HttpServlet {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.print("<script>");
-			out.print("alert('Á¤º¸ º¯°æ ½ÇÆĞ');");
+			out.print("alert('ì •ë³´ ë³€ê²½ ì‹¤íŒ¨');");
 			out.print("location.href='main.jsp';");
 			out.print("</script>");
 		}
