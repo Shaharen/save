@@ -14,7 +14,7 @@ public class DrinkDAO {
 	private String sql; 
 
 	// DB 연결
-	public void connect() {
+	public void connect() {  
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
